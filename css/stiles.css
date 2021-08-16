@@ -1,0 +1,381 @@
+
+/* Estilos Generales */
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: monospace, sans-serif;
+}
+
+/*Variables*/
+:root{
+   --titles: #A52A2A;
+   --bg-nav: #daece2;
+   --placeholder: #333;
+   --a-hover: #806CFB;
+   --icons-nav: #9e96d2;
+   --black: #000;
+   --bg-comprar: #7EFDD2;
+   --bg-comprar-hover: #aaefd8;
+   --bg-footer: #DEE9E6;
+}
+
+/*Sección de Navegación*/
+.nav{
+   display: flex;
+   justify-content: space-around;
+   padding: 15px;
+   background-color: var(--bg-nav);
+}
+
+.nav__logo{
+   min-width: 100%;
+   padding: 10px 0;
+}
+
+.nav-content{
+   display: flex;
+   flex-direction: column;
+}
+
+.nav-search{
+   display: flex;
+   align-items: center;
+}
+
+.icon{
+   padding: 10px 20px;
+}
+
+.nav-search__searcher{
+   border: 1px solid #000;
+   margin-right: 120px;
+
+}
+
+.nav-search__input{
+   height: 40px;
+   width: 600px;
+   font-size: 16px;
+   padding: 0 10px;
+   border: none;
+   background: transparent;
+   outline: none;
+}
+
+.nav-search__input::placeholder, .bulletin-suscription__email::placeholder{
+   color: var(--placeholder);
+}
+
+.login__button, .buy__button{
+   font-weight: 600;
+   cursor: pointer;
+   transition: .3s;
+}
+
+.login__button:hover, .buy__button:hover, .navbar__a:hover, .categories__a:hover, .menu__one__a:hover, .menu__two__a:hover, .menu__three__a:hover, .footer__a:hover{
+   color: var(--a-hover);
+}
+
+.nav-search__login, .nav-menu__buy{
+   display: flex;
+   align-items: center;
+}
+
+.buy__icon, .login__icon{
+   font-size: 22px;
+   margin-right: 10px;
+   color: var(--icons-nav);
+}
+
+.nav-menu{
+   display: flex;
+   justify-content: space-between;   
+   align-items: baseline;
+   margin-top: 20px;
+   margin-right: 12px;
+}
+
+.navbar__ul{
+   display: flex;
+   list-style: none;
+}
+
+.navbar__li{
+   text-decoration: none;
+   padding: 0 14px;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.navbar__a{
+   text-decoration: none;
+   color: var(--black);
+   transition: .3s;
+}
+
+/*  Section Banner*/
+.banner{
+   height: 340px;
+   outline: 1px solid #000;
+}
+.banner img{
+   position: absolute;
+   height: 340px;
+   width: 100%;
+   object-fit: cover;
+   object-position: bottom;
+}
+
+.banner-info{
+   position: relative;
+   top: 10px;
+   margin-left: 65px;
+}
+
+.banner-info__title{
+   font-size: 38px;
+}
+
+.baner-info__text{
+   font-size: 16px;
+   width: 50%;
+   text-align: justify;
+}
+
+/* Sección de más recientes */
+.central{
+   display: flex;
+   justify-content: space-around;
+   margin: 30px 20px;
+}
+
+.recent__title, .read__title{
+   font-size: 18px;
+   font-weight: 600;
+   margin-bottom: 10px;
+   color: var(--titles);
+   text-decoration: underline;
+}
+
+.recent-books, .read-books{
+   display: flex;
+   justify-content: space-around;
+}
+
+.recent__img, .read__img{   
+   width: 175px;
+   background-color: var(--bg-nav);
+   outline: 1px solid #000;
+   margin: 0 20px;
+}
+
+.recent__img img, .read__img img{   
+   width: 100%;
+   height: 252px;
+   object-fit: cover;
+   cursor: pointer;
+}
+
+.recent-info, .read-info{
+   padding: 5px;
+}
+
+.recent-info__title, .read-info__title{
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.recent-info__autor, .read-info__autor{
+   font-size: 14px;
+   padding: 5px 0;
+}
+
+.recent-info__title, .recent-info__autor, .recent-info__price, .read-info__title, .read-info__autor, .read-info__price, .footer-copy__text{
+   text-align: center;
+}
+
+.recent-info__price, .read-info__price{
+   font-weight: 600;
+}
+
+.resent-buy, .read-buy{
+   width: 100%;
+   border: none;
+   background: var(--bg-comprar);
+   padding: 5px 0;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all .3s;
+}
+.resent-buy:hover, .read-buy:hover, .bulletin-suscription__buttom:hover{
+   letter-spacing: 1px;
+   background-color: var(--bg-comprar-hover);
+}
+
+/*Sección Categorías*/
+.categories{
+ border-left: 1px solid var(--titles);
+ padding: 0 28px;
+}
+
+.categories__title, .networks__title{
+   margin-bottom: 10px;
+   text-align: center;
+   color: var(--titles);
+}
+
+.categories__ul, .footer__networks, .menu__one__ul, .menu__two__ul, .menu__three__ul{
+   list-style: none;
+}
+
+.categories__li, .menu__one__li, .menu__two__li, .menu__three__li{
+   padding: 5px;
+   text-align: center;
+}
+
+.categories__a, .menu__one__a, .menu__two__a, .menu__three__a, .footer__a{
+   text-decoration: none;
+   color: var(--black)
+}
+
+/* Sección Lo mas Leído */
+.read{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin: 30px 36px;
+}
+
+/* Sección Boletín */
+.bulletin{
+   display: flex;
+   justify-content: space-around;
+   background-color: var(--bg-nav);
+}
+
+.info, .bulletin-suscription{
+   padding: 40px;
+}
+
+.info{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.bulletin__title{
+   font-size: 34px;
+   margin-bottom: 10px;
+}
+
+.bulletin__text{
+   font-size: 20px;
+}
+
+.bulletin-suscription{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+}
+
+.bulletin-suscription__email{
+   width: 542px;
+   margin: 20px 0 10px;
+   height: 38px;
+   padding: 8px;
+   outline: none;
+   font-size: 16px;
+   background: transparent;
+   border: none;
+   border-bottom: 3px solid #000;
+   transition: .4s;
+}
+
+.bulletin-suscription__email:focus{
+   border-bottom: 3px solid var(--bg-comprar);
+}
+
+.bulletin-suscription__buttom{
+   width: 26%;
+   border: none;
+   background: var(--bg-comprar);
+   padding: 12px 0;
+   font-weight: 600;
+   font-size: 16px;
+   transition: all .3s;
+}
+
+/* Footer */
+.footer{
+   width: 100%;
+   padding: 20px 0;
+   background-color: var(--bg-footer);
+   border-top: 1px solid #000;
+}
+
+.footer-logo{
+   display: flex;
+   justify-content: center;
+   margin: 30px 0;
+}
+
+.footer__networks{
+   display: flex;
+   justify-content: center;
+   padding: 0 0 20px 0;
+}
+
+.networks__title{
+   margin-top: 16px;
+   font-size: 24px;
+}
+
+.footer__networks__li{
+   margin-right: 16px;
+}
+
+.footer__networks__li:last-child{
+   margin-right: 0;
+}
+
+.networks__a{
+   font-size: 32px;
+}
+
+.facebook{
+   color: #166FE5;
+}
+
+.instagram{
+   color: #793AB0;
+}
+
+.youtube{
+   color: #F60002;
+}
+
+.whatsapp{
+   color: #24CA44;
+}
+
+.footer-menus{
+   display: flex;
+   justify-content: space-around;
+   margin: 20px 0;
+}
+
+.footer__a{
+   transition: .3s;
+}
+
+.menu__one__a, .menu__two__a, .menu__three__a{
+   font-weight: 600;
+}
+
+.footer-copy__text{
+   font-weight: normal;
+}
