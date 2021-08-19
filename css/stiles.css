@@ -547,3 +547,7 @@ body{
 .facebook__byn, .instagram__byn, .youtube__byn, .whatsapp__byn{
    color: var(--gray);
 }
+
+.facebook__byn:hover, .instagram__byn:hover, .youtube__byn:hover, .whatsapp__byn:hover{
+   color: var(--black);
+}
